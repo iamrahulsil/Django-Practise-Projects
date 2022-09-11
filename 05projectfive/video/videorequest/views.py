@@ -5,7 +5,7 @@ from .models import VideoReq
 
 
 def index(request):
-    videoModel = VideoReq
+    videoModel = VideoReq.objects.order_by("-date_added")
     context = {'videos': videoModel}
     return render(request, "videorequest/index.html", context)
 
