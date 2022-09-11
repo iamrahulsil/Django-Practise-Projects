@@ -25,19 +25,12 @@
             {% csrf_token %}
             <h4 class="form-signin-heading">Add your video request here</h4>
             <div class="form-group">
-                <label for="inputName" class="sr-only">Video title</label>
-                <input type="text" id="inputName" class="form-control" placeholder="Name" required autofocus />
+                <label for="inputName" class="sr-only">Video title</label> {{ forms.videoname }}
             </div>
             <div class="form-group">
                 <label for="comment" class="sr-only">Details to be discussed in video</label
           >
-          <textarea
-            class="form-control"
-            rows="5"
-            id="comment"
-            placeholder="Comment"
-            required
-          ></textarea>
+          {{ forms.videodesc }}
         </div>
         <button class="btn btn-lg btn-success btn-block" type="submit">
           Submit
