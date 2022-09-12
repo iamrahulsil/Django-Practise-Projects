@@ -5,4 +5,6 @@
     <p>{{ blogs.text }}</p>
 </div>
 
+<h4><a href="{% url 'article_edit' blogs.pk %}">Edit this post</a></h4>
+
 {% endblock content %}
