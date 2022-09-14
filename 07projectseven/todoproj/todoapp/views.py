@@ -23,3 +23,11 @@ def addNewTodo(request):
         my_new_todo.save()
 
     return redirect('index')
+
+
+def completeTodo(request, todo_id):
+    mytodo = TodoModel.objects.get(pk=todo_id)
+    mytodo.completed = True
+    mytodo.save()
+
+    return redirect('index')
