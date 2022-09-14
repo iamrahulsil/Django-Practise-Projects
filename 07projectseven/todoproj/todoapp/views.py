@@ -31,3 +31,8 @@ def completeTodo(request, todo_id):
     mytodo.save()
 
     return redirect('index')
+
+
+def deleteTodo(request):
+    TodoModel.objects.filter(completed__exact=True).delete()
+    return redirect('index')
